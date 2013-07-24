@@ -27,13 +27,10 @@ if platform_family?("smartos")
 end
 
 # Until pip 1.4 drops, see https://github.com/pypa/pip/issues/1033
-python_pip "setuptools" do
-  action :upgrade
-end
-
-python_pip "Distribute" do
+package "python-setuptools" do
   action :install
 end
+
 
 python_pip "supervisor" do
   action :install
