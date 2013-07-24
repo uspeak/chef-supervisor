@@ -31,6 +31,10 @@ python_pip "setuptools" do
   action :upgrade
 end
 
+python_pip "Distribute" do
+  action :install
+end
+
 python_pip "supervisor" do
   action :install
   version node['supervisor']['version'] if node['supervisor']['version']
